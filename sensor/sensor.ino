@@ -4,6 +4,24 @@
 #define clockPin 3
 SHT1x sht1x(dataPin, clockPin);
 
+class shtx{
+  private:
+    float Temperatura;
+    float Humedad;
+  public:
+    void setTemperatura(){
+        Temperatura = sht1x.readTemperatureC();
+      }
+    void setHumedad(){
+        Humedad = sht1x.readHumidity();
+      }
+    float GetTemperatura(){
+        return Temperatura;
+      }
+    float GetHumedad(){
+        return Humedad;
+      }
+  };
 void setup()
 {
    Serial.begin(9600);
@@ -12,19 +30,17 @@ void setup()
 
 void loop()
 {
-  float temperatura;
-  float humedad;
-  //Lee los sensores
-  temperatura = sht1x.readTemperatureC();
-  humedad = sht1x.readHumidity();
-
+  shtx TH;
+  TH.setTemperatura();
+  TH.setHumedad();
   //Muestra los valores de Sensores
   Serial.print("Temperatura: ");
-  Serial.print(temperatura,1);
+  Serial.print(TH.GetTemperatura(),1);
   Serial.print(" C / ");
   Serial.print("Humedad: ");
-  Serial.print(humedad);
+  Serial.print(TH.GetHumedad());
   Serial.println("%");
 
   delay(1000);
+  
 }

@@ -1,0 +1,49 @@
+Sensores:
+
+//Emular rx y tx en pines!
+
+servo:
+	naranjo = señal
+	rojo = 5v
+	cafe = tierra(GND)
+	-tener 9v,
+
+T/H	
+	rojo = 5v
+	azul = data 
+	verde = tierra(GND)
+	amarillo = clock
+	
+
+Bluetooth
+//Nohc-06
+serie : BT12
+set = 57600
+pass 1234
+app V2 / bt simple terminal
+app v4 / btl serial
+<><>
+
+Ocupar ccs
+*hacer 2 pines de arduino a serial (TAREA)
+colcoar  resistencias de  en tx emulados
+
+cuicui = 
+baud=19200.
+
+
+//procedimiento.
+-desconectar la bateria del circuito.
+-vpp-flecha
+-setting. avanzado modo
+en power...
+-vdd = 5.0v
+-seleccionar power target cuircuit from tool
+despues a operate.
+-buscar el .hex del cuicui y cargarlo
+despues program.
+msj de alerta
+
+
+
+

@@ -9,16 +9,12 @@ class shtx{
     float Temperatura;
     float Humedad;
   public:
-    void setTemperatura(){
-        Temperatura = sht1x.readTemperatureC();
-      }
-    void setHumedad(){
-        Humedad = sht1x.readHumidity();
-      }
     float GetTemperatura(){
+        Temperatura = sht1x.readTemperatureC();
         return Temperatura;
       }
     float GetHumedad(){
+        Humedad = sht1x.readHumidity();
         return Humedad;
       }
   };
@@ -31,8 +27,6 @@ void setup()
 void loop()
 {
   shtx TH;
-  TH.setTemperatura();
-  TH.setHumedad();
   //Muestra los valores de Sensores
   Serial.print("Temperatura: ");
   Serial.print(TH.GetTemperatura(),1);

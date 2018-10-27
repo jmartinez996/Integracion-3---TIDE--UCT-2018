@@ -1,0 +1,4 @@
+Programación Sensor HC-SR04 de proximidad:
+https://www.luisllamas.es/medir-distancia-con-arduino-y-sensor-de-ultrasonidos-hc-sr04/
+https://naylampmechatronics.com/blog/10_Tutorial-de-Arduino-y-sensor-ultras%C3%B3nico-HC-S.html
+https://playground.arduino.cc/Code/NewPing

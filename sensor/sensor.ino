@@ -3,6 +3,9 @@
 
 #define dataPin  2
 #define clockPin 3
+#define LEDPin 13 // Pin de diodo LED incorporado
+#define PIRPin 4 // Pin de entrada
+
 
 //seteo de pines sensor proximidad
 #define TRIGGER_PIN  6
@@ -39,10 +42,21 @@ class sProximity{
     }
 };
 
+class spir{
+  private:
+    int value;
+  public: 
+    int GetValue(){
+      value = digitalRead(PIRPin); //leemos el pin
+      return value;
+    }
+};
+
 void setup()
 {
    Serial.begin(9600);
    Serial.println("iniciando");
+    pinMode(PIRPin, INPUT); // Configuramos el pin como entrada
 }
 
 void loop()
@@ -62,6 +76,12 @@ void loop()
   Serial.print(Px.GetDistance());  
   Serial.println("cm");
   
+  spir sp;
+  //muestra valores del sensor de presencia
+  Serial.print("Presencia: ");
+  Serial.println(sp.GetValue());//imprimimos el 1 si detecta movimiento y 0 si no
+  
+
   delay(1000);
   
 }

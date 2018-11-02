@@ -12,6 +12,8 @@
 #define ECHO_PIN     5
 #define MAX_DISTANCE 200 //distancia maxima a identificar
 
+
+
 SHT1x sht1x(dataPin, clockPin);
 //Constructor sensor proximidad
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
@@ -54,33 +56,48 @@ class spir{
 
 void setup()
 {
-   Serial.begin(9600);
-   Serial.println("iniciando");
+   Serial.begin(57600);
+   //Serial.println("iniciando");
     pinMode(PIRPin, INPUT); // Configuramos el pin como entrada
 }
 
 void loop()
 {
+  int temp;
+  int dist;
   shtx TH;
   //Muestra los valores de Sensores
-  Serial.print("Temperatura: ");
-  Serial.print(TH.GetTemperatura(),1);
-  Serial.print(" C / ");
-  Serial.print("Humedad: ");
-  Serial.print(TH.GetHumedad());
-  Serial.println("%");
+  //Serial.print("Temperatura: ");
+  temp = (TH.GetTemperatura());
+  //Serial.print("Humedad: ");
+  //Serial.print(TH.GetHumedad());
+  //Serial.println("%");
 
   sProximity Px; //instacia clase sProximity
   //Muestra valores sensor de proximidad en cm
-  Serial.print("Distancia: ");
-  Serial.print(Px.GetDistance());  
-  Serial.println("cm");
+  
+  dist = (Px.GetDistance());
+
+  Serial.print("temp: ");
+  Serial.println(temp);
+  //Serial.print("|");
+  Serial.print("distancia: ");
+  Serial.println(dist);
+  //Serial.print(dist);
+
+  
+  //Serial.print(",");  
+  //Serial.println("cm");
   
   spir sp;
   //muestra valores del sensor de presencia
-  Serial.print("Presencia: ");
-  Serial.println(sp.GetValue());//imprimimos el 1 si detecta movimiento y 0 si no
-  
+  //Serial.print("Presencia: ");
+  //Serial.print(sp.GetValue());//imprimimos el 1 si detecta movimiento y 0 si no
+  //Serial.print(",");
+  //int temp = (TH.GetTemperatura(),1);
+  //int dist = Px.GetDistance();
+  //sprintf(buffer,"%d",dist);
+  //Serial.println(buffer);
 
   delay(1000);
   

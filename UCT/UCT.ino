@@ -1,9 +1,14 @@
 #include <SHT1x.h>
 #include <NewPing.h> //libreria para sensor de proximidad
-
+//Set pin de temperatura y humedad
 #define dataPin  2
 #define clockPin 3
-#define LEDPin 13 // Pin de diodo LED incorporado
+//define pines para Led (Provisorios)
+#define LEDPin1 13
+#define LEDPin2 12
+#define LEDPin3 11
+#define LEDPin4 10
+//Set pin de Pir
 #define PIRPin 4 // Pin de entrada
 
 
@@ -12,10 +17,16 @@
 #define ECHO_PIN     5
 #define MAX_DISTANCE 200 //distancia maxima a identificar
 
+//Iniciacion de Variables
+int estado;
+int temp;
+int humedad;
+int dist;
+int piir;
 
 
+//Constructor sensor proximidad y temmperatura y humedad
 SHT1x sht1x(dataPin, clockPin);
-//Constructor sensor proximidad
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
 
 class shtx{
@@ -59,46 +70,65 @@ void setup()
    Serial.begin(57600);
    //Serial.println("iniciando");
     pinMode(PIRPin, INPUT); // Configuramos el pin como entrada
+    pinMode(LEDPin1 , OUTPUT);
+    pinMode(LEDPin2 , OUTPUT);
+    pinMode(LEDPin3 , OUTPUT);
+    pinMode(LEDPin4 , OUTPUT);
 }
 
 void loop()
 {
-  int temp;
-  int dist;
+  
   shtx TH;
-  //Muestra los valores de Sensores
-  //Serial.print("Temperatura: ");
   temp = (TH.GetTemperatura());
-  //Serial.print("Humedad: ");
-  //Serial.print(TH.GetHumedad());
-  //Serial.println("%");
+  humedad =(TH.GetHumedad());
+ 
 
   sProximity Px; //instacia clase sProximity
   //Muestra valores sensor de proximidad en cm
-  
   dist = (Px.GetDistance());
 
-  Serial.print("temp: ");
-  Serial.println(temp);
-  //Serial.print("|");
-  Serial.print("distancia: ");
-  Serial.println(dist);
-  //Serial.print(dist);
-
-  
-  //Serial.print(",");  
-  //Serial.println("cm");
-  
   spir sp;
-  //muestra valores del sensor de presencia
-  //Serial.print("Presencia: ");
-  //Serial.print(sp.GetValue());//imprimimos el 1 si detecta movimiento y 0 si no
-  //Serial.print(",");
-  //int temp = (TH.GetTemperatura(),1);
-  //int dist = Px.GetDistance();
-  //sprintf(buffer,"%d",dist);
-  //Serial.println(buffer);
+  piir=(sp.GetValue());//imprimimos el 1 si detecta movimiento y 0 si no
+  Serial.print("Temperatura: ");
+  Serial.print(temp);
+  Serial.println(" C");
+  Serial.print("Humedad: ");
+  Serial.print(humedad);
+  Serial.println("%");
+  Serial.print("Distancia: ");
+  Serial.print(dist);
+  Serial.println("cm");
+  Serial.print("Movimiento: ");
+  Serial.println(piir);
+  
+  if(Serial.available()>0){
+     estado = 0;
+     estado = Serial.read();
+  
+    if(estado =='1'){ //Ariba
+         digitalWrite(LEDPin1 , HIGH);
+         delay(1000);
+         digitalWrite(LEDPin1 , LOW);
+        
+      }
+    if(estado =='2'){ //Abajo  
+        digitalWrite(LEDPin2 , HIGH);
+        delay(1000);
+        digitalWrite(LEDPin2 , LOW);
 
-  delay(1000);
+    }
+    if(estado =='3'){//Derecha
+        digitalWrite(LEDPin3 , HIGH);
+        delay(1000);
+        digitalWrite(LEDPin3 , LOW);
+   
+    }
+    if(estado =='4'){//Izquierda
+        digitalWrite(LEDPin4 , HIGH);
+        delay(1000);
+        digitalWrite(LEDPin4 , LOW);      
+    } 
+  } 
   
 }

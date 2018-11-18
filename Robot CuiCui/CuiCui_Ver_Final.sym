@@ -1,0 +1,319 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     mov_ant
+01B     mov_act
+01C-034 datos
+035     valorR
+036-037 q
+038-039 level_ir_b
+03A-03B level_source_b
+03C-03D distancia_0
+03E-03F distancia_1
+040-041 diferencia_T0
+042-043 diferencia_T1
+044-045 distancia_recorrida_1
+046-047 distancia_recorrida_2
+048-049 control_M1
+04A-04B control_M2
+04C-04D valor_pwm
+04E-04F vel_pwm
+050-051 T0_Act
+052-053 T1_Act
+054-055 T0_Ant
+056-057 T1_Ant
+058-059 Delta_T0
+05A-05B Delta_T1
+05C-05D Delta_T0_ant
+05E-05F counter_sleep
+060-063 p
+064-067 level_ir
+068-06B level_source
+06C-06F rV
+070-073 eV
+074-077 iV
+078-07B dV
+07C-07F yV
+080-083 uV
+084-087 iV0
+088-08B eV0
+08C-08F uV2
+090-093 eD
+094-097 iD
+098-09B dD
+09C-09F iD0
+0A0-0A3 eD0
+0A4-0A7 uD
+0A8-0AB velocidad_ref
+0AC-0AF delta_recorrido
+0B0-0B3 velocidad_T0
+0B4-0C7 times_cr
+0C8-0D1 sbits
+0D2.0   first_ext
+0D2.1   start_recived
+0D2.2   hay_dato
+0D2.3   wake_up
+0D2.4   out_sleep
+0D2.5   temp
+0D2.6   control_tipo
+0D3     i
+0D4     j
+0D5     k
+0D6-0D7 tt
+0D8-0D9 tti
+0DA-0DB t
+0DC     ntbits
+0DD     contador
+0DE-0E5 bits
+0E6-0E7 bytes
+0E8     identificador
+0E9     dato_ir
+0EA-0EB @sprintf_string
+0EC-0EF atan2.y
+0EC-0EF @PRINTF_L32D_57600_31766_31767FPFPF.P1
+0EC-0ED generate_tone.frequency
+0EC     @PSTRINGCN_57600_31766_31767.P1
+0EC     melodia_inicio.@SCRATCH1
+0EC     melodia_sleep.@SCRATCH1
+0EC     verificar_level_ir.@SCRATCH1
+0EC     ejecucion_pwm.@SCRATCH1
+0EC     convierte_bits_a_bytes.@SCRATCH1
+0EC     @PSTRINGC_57600_31766_31767.@SCRATCH1
+0EC     MAIN.@SCRATCH1
+0ED     verificar_level_ir.@SCRATCH2
+0ED     ejecucion_pwm.@SCRATCH2
+0ED     convierte_bits_a_bytes.@SCRATCH2
+0ED     @PSTRINGC_57600_31766_31767.@SCRATCH2
+0ED     @PSTRINGCN_57600_31766_31767.@SCRATCH1
+0ED     MAIN.@SCRATCH2
+0EE-0EF generate_tone.duration
+0EE     verificar_level_ir.@SCRATCH3
+0EE     ejecucion_pwm.@SCRATCH3
+0EE     convierte_bits_a_bytes.@SCRATCH3
+0EE     @PSTRINGCN_57600_31766_31767.@SCRATCH2
+0EE     MAIN.@SCRATCH3
+0EF     verificar_level_ir.@SCRATCH4
+0EF     MAIN.@SCRATCH4
+0F0     @PRINTF_L32D_57600_31766_31767FPFPF.P1
+0F0-0F3 atan2.x
+0F0-0F3 generate_tone.total_delay_time
+0F1     @PRINTF_L32D_57600_31766_31767FPFPF.@SCRATCH1
+0F2     @PRINTF_L32D_57600_31766_31767FPFPF.@SCRATCH2
+0F3     @PRINTF_L32D_57600_31766_31767FPFPF.@SCRATCH3
+0F4-0F7 atan2.z
+0F4-0F5 generate_tone.total_ms_delay_time
+0F4     @PRINTF_L32D_57600_31766_31767FPFPF.@SCRATCH4
+0F5     @PRINTF_L32D_57600_31766_31767FPFPF.@SCRATCH5
+0F6-0F7 generate_tone.total_us_delay_time
+0F6     @PRINTF_L32D_57600_31766_31767FPFPF.@SCRATCH6
+0F7     @PRINTF_L32D_57600_31766_31767FPFPF.@SCRATCH7
+0F8.0   atan2.sign
+0F8     generate_tone.num_us_delays
+0F8     @PRINTF_L32D_57600_31766_31767FPFPF.@SCRATCH8
+0F9-0FC @FTOSD.P1
+0F9     generate_tone.num_ms_delays
+0F9     atan2.quad
+0FA     generate_tone.ms_delay_time
+0FB     generate_tone.us_delay_time
+0FC-0FD generate_tone.num_periods
+0FD     @FTOSD.@SCRATCH1
+0FE-0FF @DIV1616.P1
+0FE     do_delay.ms_delay
+0FE     generate_tone.@SCRATCH1
+0FF     do_delay.num_ms
+0FF     generate_tone.@SCRATCH2
+100-101 @DIV1616.P1
+100     do_delay.us_delay
+100     generate_tone.@SCRATCH3
+101     do_delay.num_us
+101     generate_tone.@SCRATCH4
+102-105 @MUL3232.P1
+102     do_delay.i
+102     generate_tone.@SCRATCH5
+102     @DIV1616.@SCRATCH1
+103     @delay_us1.P1
+103     @delay_ms1.P2
+103     generate_tone.@SCRATCH6
+104     generate_tone.@SCRATCH7
+105     generate_tone.@SCRATCH8
+106-109 @DIV3232.P1
+106-109 @MUL3232.P2
+10A-10D @DIV3232.P1
+10A     @MUL3232.@SCRATCH1
+10B     @MUL3232.@SCRATCH2
+10C     @MUL3232.@SCRATCH3
+10D     @MUL3232.@SCRATCH4
+10E     @DIV3232.@SCRATCH1
+10E     @MUL3232.@SCRATCH5
+10F     @DIV3232.@SCRATCH2
+10F     @MUL3232.@SCRATCH6
+110     @DIV3232.@SCRATCH3
+111     @DIV3232.@SCRATCH4
+112     @DIV3232.@SCRATCH5
+113-116 @SFTOI.P1
+113-116 @MULFF.P2
+113-116 @FLT.P3
+113     limpia_bits.@SCRATCH1
+113     timer3_isr.@SCRATCH1
+113     ext_isr.@SCRATCH1
+114     limpia_bits.@SCRATCH2
+114     timer3_isr.@SCRATCH2
+114     ext_isr.@SCRATCH2
+115     timer3_isr.@SCRATCH3
+116     timer3_isr.@SCRATCH4
+117-11A @ADDFF.P1
+117-11A @MULFF.P2
+117-118 @ITOF.P3
+117-11A @FLT.P4
+117-11A @DIVFF.P5
+11B-11E @DIVFF.P1
+11B-11E @ADDFF.P2
+11B     @FLT.@SCRATCH1
+11B     @MULFF.@SCRATCH1
+11C     @FLT.@SCRATCH2
+11C     @MULFF.@SCRATCH2
+11D     @MULFF.@SCRATCH3
+11F     @ADDFF.@SCRATCH1
+11F     @DIVFF.@SCRATCH1
+120     @ADDFF.@SCRATCH2
+120     @DIVFF.@SCRATCH2
+121     @ADDFF.@SCRATCH3
+121     @DIVFF.@SCRATCH3
+122     @ADDFF.@SCRATCH4
+122     @DIVFF.@SCRATCH4
+123     @ADDFF.@SCRATCH5
+123     @DIVFF.@SCRATCH5
+124     @ADDFF.@SCRATCH6
+124     @DIVFF.@SCRATCH6
+125     @ADDFF.@SCRATCH7
+126     @ADDFF.@SCRATCH8
+FA1     PIR2
+FA1.1   TMR3IF
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FCD     T1CON
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000D2  Version.call
+0000D2  Version.data
+0000D8  @ITOF
+00010E  @ADDFF
+000386  @DIVFF
+0004E4  @MULFF
+0005DA  @FLT
+000654  @SFTOI
+000690  timer3_isr
+000C8C  serial_isr
+000CA4  comp_isr
+000CBC  limpia_bits
+000CDC  ext_isr
+000DA4  @const1000.call
+000DD0  @const1005.call
+000DDC  @const1020.call
+000DEA  @const1021.call
+000E06  @const1022.call
+000E10  @const1030.call
+000E36  @const1031.call
+000E4C  @const1037.call
+000E5E  @delay_ms1
+000E86  @PSTRINGCN_57600_31766_31767
+000EA6  @PSTRINGC_57600_31766_31767
+000EC8  @DIV3232
+000F5C  @DIV1616
+000FA6  @MUL3232
+001002  @delay_us1
+001022  do_delay
+001068  generate_tone
+001268  melodia_inicio
+00132A  @FTOSD
+00136A  @PRINTF_L32D_57600_31766_31767FPFPF
+001502  melodia_sleep
+001566  convierte_bits_a_bytes
+0015F0  melodia_wake_up
+001660  verificar_level_ir
+001800  ejecucion_pwm
+0019C0  @cinit1
+0019C0  MAIN
+001A4C  @cinit2
+0020C2  @goto8955
+0020EA  @goto9014
+
+Project Directory:
+    C:\Users\Jose\Desktop\Robot CuiCui\
+
+Project Files:
+    CuiCui_Ver_Final.c                                      [18-nov.-18 19:08  CRC=C38AA5D1]
+    CuiCui_Ver_Final.h                                      [18-nov.-18 19:04  CRC=2466DB06]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\18F2520.h  [20-sept.-18 13:34  CRC=6CE380AF]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h     [22-sept.-16 09:36  CRC=9CF8C837]
+    tones_c5.c                                              [12-oct.-18 14:54  CRC=946477BD]
+
+Source signature=1A96B937
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=F2A1
+
+Units:
+    CuiCui_Ver_Final (main)
+
+Compiler Settings:
+    Processor:      PIC18F2520
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   CuiCui_Ver_Final.xsym
+    Errors:      CuiCui_Ver_Final.err
+    Ext Symbols: CuiCui_Ver_Final.esym
+    INHX32:      CuiCui_Ver_Final.hex
+    Symbols:     CuiCui_Ver_Final.sym
+    List:        CuiCui_Ver_Final.lst
+    Debug/COFF:  CuiCui_Ver_Final.cof
+    Project:     CuiCui_Ver_Final.ccspjt
+    Call Tree:   CuiCui_Ver_Final.tre
+    Statistics:  CuiCui_Ver_Final.STA

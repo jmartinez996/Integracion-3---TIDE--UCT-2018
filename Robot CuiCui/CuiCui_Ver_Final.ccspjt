@@ -1,0 +1,117 @@
+[PROJECT]
+Target=CuiCui_Ver_Final.hex
+Development_Mode=
+Processor_Text=PIC18F2520
+ToolSuite=CCS
+Processor=0x2550
+CCSVersion=5.081d
+Compiler=PCH
+[C:\Users\José\Desktop\Nuevo proyecto\Robot CuiCui\CuiCui_Ver_Final]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=CuiCui_Ver_Final.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=CuiCui_Ver_Final.c
+2=CuiCui_Ver_Final.h
+3=..\led-con serial\serial.c
+4=tones_c5.c
+5=..\..\..\..\..\Program Files\PICC\examples\ex_wakup.c
+6=
+7=
+t1=981
+t2=6
+t3=1
+Count=2
+
+[ProjectLog]
+Days=2
+D1=10-10-2018
+D1_L=2
+D1_L1=[41549]Project Opened.
+D1_L2=[42425]Project Closed.
+D2=18-11-2018
+D2_L=16
+D2_L1=[67557]Project Opened.
+D2_L2=[67618]Started Editing.
+D2_L3=[67755]Stopped Editing.
+TotalEdit=24
+TotalDebug=0
+D2_E=24
+D2_D=0
+D2_L4=[67812]Started Editing.
+D2_L5=[67816]Stopped Editing.
+D2_L6=[67848]Started Editing.
+D2_L7=[67856]Stopped Editing.
+D2_L8=[67896]Started Editing.
+D2_L9=[67960]Stopped Editing.
+D2_L10=[67983]Started Editing.
+D2_L11=[68103]Stopped Editing.
+D2_L12=[68103]Project Closed.
+D2_L13=[68113]Project Opened.
+D2_L14=[68131]Started Editing.
+D2_L15=[68912]Stopped Editing.
+D2_L16=[68912]Project Closed.
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=18
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+FileList=CuiCui_Ver_Final.c
+
+[..\..\..\José\Desktop\Nuevo proyecto\Robot CuiCui\CuiCui_Ver_Final.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[CompilerVersion]
+Fixed=
+
+[CuiCui_Ver_Final.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[Units]
+Count=1
+1=CuiCui_Ver_Final (main)

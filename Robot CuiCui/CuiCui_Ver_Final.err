@@ -1,0 +1,21 @@
+Compiling C:\Users\Jose\Desktop\Robot CuiCui\CuiCui_Ver_Final on 18-nov.-18 at 19:08
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 989(1,2): Interrupts disabled during call to prevent re-entrancy:  (@MULFF)
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 989(1,2): Interrupts disabled during call to prevent re-entrancy:  (@ITOF)
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 989(1,2): Interrupts disabled during call to prevent re-entrancy:  (@DIVFF)
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 989(1,2): Interrupts disabled during call to prevent re-entrancy:  (@FLT)
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 989(1,2): Interrupts disabled during call to prevent re-entrancy:  (limpia_bits)
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Db_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   D_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Eb_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   F_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Gb_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   G_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Ab_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Bb_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   B_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 40(6,12): Variable never used:   valorR
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 42(7,8): Variable never used:   q
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 47(7,8): Variable never used:   p
+      Memory usage:   ROM=26%      RAM=16% - 19%
+      0 Errors,  17 Warnings.
+Build Successful.

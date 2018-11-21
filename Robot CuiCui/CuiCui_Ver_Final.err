@@ -1,7 +1,20 @@
-Compiling C:\Users\ellio\OneDrive\Documentos\Intrgracion 3\Integracion-3---TIDE--UCT-2018\Robot CuiCui\CuiCui_Ver_Final on 20-Nov-18 at 21:25
-*** Error 18 "CuiCui_Ver_Final.c" Line 2(10,65): File can not be opened
-    Not in source "C:\Users\Jose\Desktop\Robot CuiCui\CuiCui_Ver_Final.h"
-    Not in local "C:\Users\Jose\Desktop\Robot CuiCui\CuiCui_Ver_Final.h"
-    Not in project "C:\Users\ellio\OneDrive\Documentos\Intrgracion 3\Integracion-3---TIDE--UCT-2018\Robot CuiCui\C:\Users\Jose\Desktop\Robot CuiCui\CuiCui_Ver_Final.h"
-    Not in default "C:\Users\ellio\OneDrive\Documentos\Intrgracion 3\Integracion-3---TIDE--UCT-2018\Robot CuiCui\C:\Users\Jose\Desktop\Robot CuiCui\CuiCui_Ver_Final.h"
-*** Error 128 "CuiCui_Ver_Final.c" Line 4(2,6): A #DEVICE required before this line
+Compiling C:\Users\ellio\OneDrive\Documentos\Intrgracion 3\Integracion-3---TIDE--UCT-2018\Robot CuiCui\CuiCui_Ver_Final on 20-Nov-18 at 23:44
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 997(1,2): Interrupts disabled during call to prevent re-entrancy:  (@MULFF)
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 997(1,2): Interrupts disabled during call to prevent re-entrancy:  (@ITOF)
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 997(1,2): Interrupts disabled during call to prevent re-entrancy:  (@DIVFF)
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 997(1,2): Interrupts disabled during call to prevent re-entrancy:  (@FLT)
+>>> Warning 216 "CuiCui_Ver_Final.c" Line 997(1,2): Interrupts disabled during call to prevent re-entrancy:  (limpia_bits)
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Db_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   D_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Eb_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   F_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Gb_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   G_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Ab_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   Bb_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 0(0,0): Variable never used:   B_NOTE
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 43(7,8): Variable never used:   q
+>>> Warning 202 "CuiCui_Ver_Final.c" Line 48(7,8): Variable never used:   p
+      Memory usage:   ROM=26%      RAM=16% - 19%
+      0 Errors,  16 Warnings.
+Build Successful.

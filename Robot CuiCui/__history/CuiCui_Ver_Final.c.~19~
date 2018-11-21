@@ -1,5 +1,6 @@
    
-#include "C:\Users\Jose\Desktop\Robot CuiCui\CuiCui_Ver_Final.h"
+//#include "C:\Users\Jose\Desktop\Robot CuiCui\CuiCui_Ver_Final.h"
+#include "C:\Users\ellio\OneDrive\Documentos\Intrgracion 3\Integracion-3---TIDE--UCT-2018\Robot CuiCui\CuiCui_Ver_Final.h"
 
 #byte T1CON = 0x0FCD
 #byte PIR2 = 0x0FA1
@@ -662,14 +663,47 @@ void main() {
                             //Melodía de Inicio
   melodia_inicio();
   //Recibo de un dato por arduino
-  /*
+  
   while(True){
-   valorR = kbhit();
-   if(ValorR == 1){
-      melodia_inicio();
-      valorR=0;
+   //valorR = getc();
+   //if(valorR == 1100000){  //arriba
+                 control_tipo=0;
+                 output_B((input_b() & 0b00001111) | 0b01100000 ); //(M2B, M2A, M1B, M1A, PWM2, RB2, RB1, IRDATA)
+                 vel_pwm = vel3;
+                 output_high(PIN_B1);
+                 
+                 ejecucion_pwm();
+                 output_low(PIN_B1);
+   //}
+   if(valorR == 10010000){ //abajo
+                 control_tipo=0;
+                 output_B((input_b() & 0b00001111) | 0b10010000 ); //(M2B, M2A, M1B, M1A, PWM2, RB2, RB1, IRDATA)    
+                 vel_pwm = vel3;
+                 output_high(PIN_B1);
+                 ejecucion_pwm();
+                 output_low(PIN_B1);
    }
-  }*/
+   if(valorR == 10100000){  //izquierda
+                 control_tipo=0;
+                 output_B((input_b() & 0b00001111) | 0b10100000 ); //(M2B, M2A, M1B, M1A, PWM2, RB2, RB1, IRDATA)                 
+                 vel_pwm = vel3;
+                 output_high(PIN_B1);
+                 ejecucion_pwm();
+                 output_low(PIN_B1);
+   }
+   if(valorR == 01010000){ //derecha
+                 control_tipo=0;
+                 output_B((input_b() & 0b00001111) | 0b01010000 ); //(M2B, M2A, M1B, M1A, PWM2, RB2, RB1, IRDATA)                 
+                 vel_pwm = vel3;
+                 output_high(PIN_B1);
+                 ejecucion_pwm();
+                 output_low(PIN_B1);
+   }
+   //if(ValorR == 1){
+   //   melodia_inicio();
+   //   valorR=0;
+   //}
+  }
   
   disable_interrupts(int_timer3);
   setup_timer_3(T3_INTERNAL | T3_DIV_BY_8);
@@ -774,7 +808,7 @@ void main() {
                  //ejecucion_pwm();
                  //verificar_level_ir();
                  control_tipo=0;
-                 output_B((input_b() & 0b00001111) | 0b01100000 ); //(M2B, M2A, M1B, M1A, PWM2, RB2, RB1, IRDATA)                 
+                 output_B((input_b() & 0b00001111) | 0b01100000 ); //(M2B, M2A, M1B, M1A, PWM2, RB2, RB1, IRDATA)
                  vel_pwm = vel3;
                  output_high(PIN_B1);
                  

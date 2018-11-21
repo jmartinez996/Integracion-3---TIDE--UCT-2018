@@ -90,6 +90,7 @@ void loop()
 
   spir sp;
   piir=(sp.GetValue());//imprimimos el 1 si detecta movimiento y 0 si no
+  /*
   Serial.print("Temperatura: ");
   Serial.print(temp);
   Serial.println(" C");
@@ -101,7 +102,8 @@ void loop()
   Serial.println("cm");
   Serial.print("Movimiento: ");
   Serial.println(piir);
-  
+  */
+  Serial.println(2);
   if(Serial.available()>0){
      estado = 0;
      estado = Serial.read();

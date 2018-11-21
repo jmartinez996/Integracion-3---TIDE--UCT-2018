@@ -263,33 +263,33 @@ ROM Allocation:
 001022  do_delay
 001068  generate_tone
 001268  melodia_inicio
-00132A  @FTOSD
-00136A  @PRINTF_L32D_57600_31766_31767FPFPF
-001502  melodia_sleep
-001566  convierte_bits_a_bytes
-0015F0  melodia_wake_up
-001660  verificar_level_ir
-001800  ejecucion_pwm
-0019C0  @cinit1
-0019C0  MAIN
-001A4C  @cinit2
-0020C2  @goto8955
-0020EA  @goto9014
+001328  melodia_sleep
+00138A  @FTOSD
+0013CA  @PRINTF_L32D_57600_31766_31767FPFPF
+001562  convierte_bits_a_bytes
+0015EC  melodia_wake_up
+00165C  verificar_level_ir
+0017FC  ejecucion_pwm
+0019BC  @cinit1
+0019BC  MAIN
+001A48  @cinit2
+0020DE  @goto29626
+002106  @goto29697
 
 Project Directory:
-    C:\Users\Jose\Desktop\Robot CuiCui\
+    C:\Users\ellio\OneDrive\Documentos\Intrgracion 3\Integracion-3---TIDE--UCT-2018\Robot CuiCui\
 
 Project Files:
-    CuiCui_Ver_Final.c                                      [18-nov.-18 19:08  CRC=C38AA5D1]
-    CuiCui_Ver_Final.h                                      [18-nov.-18 19:04  CRC=2466DB06]
-    ..\..\..\..\Program Files (x86)\PICC\Devices\18F2520.h  [20-sept.-18 13:34  CRC=6CE380AF]
-    ..\..\..\..\Program Files (x86)\PICC\Drivers\math.h     [22-sept.-16 09:36  CRC=9CF8C837]
-    tones_c5.c                                              [12-oct.-18 14:54  CRC=946477BD]
+    CuiCui_Ver_Final.c                                      [20-Nov-18 23:44  CRC=AEE277E1]
+    CuiCui_Ver_Final.h                                      [20-Nov-18 20:37  CRC=2466DB06]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F2520.h [20-Sep-18 13:34  CRC=6CE380AF]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\math.h [22-Sep-16 09:36  CRC=9CF8C837]
+    tones_c5.c                                              [20-Nov-18 20:37  CRC=946477BD]
 
-Source signature=1A96B937
+Source signature=05EE8B47
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=F2A1
+Hex file CRC=5A2A
 
 Units:
     CuiCui_Ver_Final (main)

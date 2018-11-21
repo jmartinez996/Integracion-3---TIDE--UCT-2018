@@ -25,10 +25,10 @@ AdditionalOptionString=
 5=..\..\..\..\..\Program Files\PICC\examples\ex_wakup.c
 6=
 7=
-t1=981
+t1=658
 t2=6
 t3=1
-Count=2
+Count=1
 
 [ProjectLog]
 Days=3
@@ -41,7 +41,7 @@ D2_L=16
 D2_L1=[67557]Project Opened.
 D2_L2=[67618]Started Editing.
 D2_L3=[67755]Stopped Editing.
-TotalEdit=32
+TotalEdit=58
 TotalDebug=0
 D2_E=24
 D2_D=0
@@ -59,13 +59,33 @@ D2_L14=[68131]Started Editing.
 D2_L15=[68912]Stopped Editing.
 D2_L16=[68912]Project Closed.
 D3=20-11-2018
-D3_L=4
+D3_L=24
 D3_L1=[74545]Project Opened.
 D3_L2=[76789]Started Editing.
 D3_L3=[77222]Stopped Editing.
-D3_E=8
+D3_E=34
 D3_D=0
 D3_L4=[77222]Project Closed.
+D3_L5=[78266]Project Opened.
+D3_L6=[78299]Started Editing.
+D3_L7=[78728]Stopped Editing.
+D3_L8=[79868]Started Editing.
+D3_L9=[80242]Stopped Editing.
+D3_L10=[81215]Started Editing.
+D3_L11=[81539]Stopped Editing.
+D3_L12=[81615]Started Editing.
+D3_L13=[81915]Stopped Editing.
+D3_L14=[82235]Started Editing.
+D3_L15=[82536]Stopped Editing.
+D3_L16=[82759]Started Editing.
+D3_L17=[83179]Stopped Editing.
+D3_L18=[83297]Started Editing.
+D3_L19=[83730]Stopped Editing.
+D3_L20=[84196]Started Editing.
+D3_L21=[85306]Stopped Editing.
+D3_L22=[85315]Started Editing.
+D3_L23=[85563]Stopped Editing.
+D3_L24=[85563]Project Closed.
 
 [fileformats]
 forcecoff=0
@@ -93,7 +113,7 @@ enabled=0
 chip=1
 D1=
 V1=
-buildcount=18
+buildcount=36
 
 [Target Data]
 BuildTool=C-COMPILER

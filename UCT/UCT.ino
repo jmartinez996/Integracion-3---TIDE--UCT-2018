@@ -110,24 +110,28 @@ void loop()
          digitalWrite(LEDPin1 , HIGH);
          delay(1000);
          digitalWrite(LEDPin1 , LOW);
+         Serial.print(96,BIN);
         
       }
     if(estado =='2'){ //Abajo  
         digitalWrite(LEDPin2 , HIGH);
         delay(1000);
         digitalWrite(LEDPin2 , LOW);
+        Serial.print(144,BIN);
 
     }
     if(estado =='3'){//Derecha
         digitalWrite(LEDPin3 , HIGH);
         delay(1000);
         digitalWrite(LEDPin3 , LOW);
+        Serial.print(80,BIN);
    
     }
     if(estado =='4'){//Izquierda
         digitalWrite(LEDPin4 , HIGH);
         delay(1000);
-        digitalWrite(LEDPin4 , LOW);      
+        digitalWrite(LEDPin4 , LOW);
+        Serial.print(160,BIN);  
     } 
   } 
   

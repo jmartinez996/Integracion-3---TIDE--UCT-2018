@@ -31,7 +31,7 @@ t3=1
 Count=2
 
 [ProjectLog]
-Days=2
+Days=3
 D1=10-10-2018
 D1_L=2
 D1_L1=[41549]Project Opened.
@@ -41,7 +41,7 @@ D2_L=16
 D2_L1=[67557]Project Opened.
 D2_L2=[67618]Started Editing.
 D2_L3=[67755]Stopped Editing.
-TotalEdit=24
+TotalEdit=32
 TotalDebug=0
 D2_E=24
 D2_D=0
@@ -58,6 +58,14 @@ D2_L13=[68113]Project Opened.
 D2_L14=[68131]Started Editing.
 D2_L15=[68912]Stopped Editing.
 D2_L16=[68912]Project Closed.
+D3=20-11-2018
+D3_L=4
+D3_L1=[74545]Project Opened.
+D3_L2=[76789]Started Editing.
+D3_L3=[77222]Stopped Editing.
+D3_E=8
+D3_D=0
+D3_L4=[77222]Project Closed.
 
 [fileformats]
 forcecoff=0

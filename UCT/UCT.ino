@@ -3,18 +3,23 @@
 //Set pin de temperatura y humedad
 #define dataPin  2
 #define clockPin 3
-//define pines para Led (Provisorios)
+//define pines para Led (Provisorios) //COMO SON PINES PROVISORIOS SACAR CAGANDO NOMAS 
 #define LEDPin1 13
 #define LEDPin2 12
 #define LEDPin3 11
-#define LEDPin4 10
+#define LEDPin4 10        // CAMBIAR ESTE PIN
 //Set pin de Pir
 #define PIRPin 4 // Pin de entrada
-
+// PINES para motores
+#define  izqA 5;
+#define  izqB 6;
+#define  derA 9;
+#define  derB 10;
+int velocidad = 255;          // velocidad de los motores (0-255)
 
 //seteo de pines sensor proximidad
-#define TRIGGER_PIN  6
-#define ECHO_PIN     5
+#define TRIGGER_PIN  6      // CAMBIAR ESTE PIN
+#define ECHO_PIN     5      // CAMBIAR ESTE PIN
 #define MAX_DISTANCE 200 //distancia maxima a identificar
 
 //Iniciacion de Variables
@@ -74,13 +79,19 @@ void setup()
     pinMode(LEDPin2 , OUTPUT);
     pinMode(LEDPin3 , OUTPUT);
     pinMode(LEDPin4 , OUTPUT);
+
+    //pinMode para control motores
+    pinMode(izqA, OUTPUT);
+    pinMode(izqB, OUTPUT);
+    pinMode(derA, OUTPUT);
+    pinMode(derB, OUTPUT);
+
 }
 
 void loop()
 {
-  
   shtx TH;
-  temp = (TH.GetTemperatura());
+  temp = (TH.GetTempe ratura());
   humedad =(TH.GetHumedad());
  
 
@@ -112,28 +123,44 @@ void loop()
          digitalWrite(LEDPin1 , HIGH);
          delay(1000);
          digitalWrite(LEDPin1 , LOW);
-         Serial.print(96,BIN);
+         //new
+         analogWrite(derB, 0);     
+         analogWrite(izqB, 0); 
+         analogWrite(derA, velocidad);  
+         analogWrite(izqA, velocidad);  
         
       }
     if(estado =='2'){ //Abajo  
         digitalWrite(LEDPin2 , HIGH);
         delay(1000);
         digitalWrite(LEDPin2 , LOW);
-        Serial.print(144,BIN);
-
+        //new
+        analogWrite(derA, 0);    
+        analogWrite(izqA, 0);
+        analogWrite(derB, velocidad);  
+        analogWrite(izqB, velocidad);  
+      
     }
     if(estado =='3'){//Derecha
         digitalWrite(LEDPin3 , HIGH);
         delay(1000);
         digitalWrite(LEDPin3 , LOW);
-        Serial.print(80,BIN);
-   
+        //new
+
+        analogWrite(derB, 0);     
+        analogWrite(izqB, 0);
+        analogWrite(izqA, 0);
+        analogWrite(derA, velocidad);  
     }
     if(estado =='4'){//Izquierda
         digitalWrite(LEDPin4 , HIGH);
         delay(1000);
         digitalWrite(LEDPin4 , LOW);
-        Serial.print(160,BIN);  
+        //new
+        analogWrite(derB, 0);     
+        analogWrite(izqB, 0); 
+        analogWrite(derA, 0);  
+        analogWrite(izqA, velocidad);    
     } 
   } 
   

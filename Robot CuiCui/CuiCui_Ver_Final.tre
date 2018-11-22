@@ -1,11 +1,11 @@
 ÀÄCuiCui_Ver_Final
-   ÃÄMAIN  0/1826  Ram=4
+   ÃÄMAIN  0/1808  Ram=4
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄ@delay_ms1  0/40  Ram=1
    ³  ÃÄ@PSTRINGCN_57600_31766_31767  0/32  Ram=3
    ³  ÃÄ@PSTRINGC_57600_31766_31767  0/34  Ram=2
    ³  ÃÄlimpia_bits  0/32  Ram=2
-   ³  ÃÄmelodia_inicio  0/192  Ram=1
+   ³  ÃÄmelodia_inicio  0/194  Ram=1
    ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
    ³  ³  ÃÄgenerate_tone  0/512  Ram=26
    ³  ³  ³  ÃÄ@DIV3232  0/148  Ram=13
@@ -43,19 +43,6 @@
    ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
    ³  ³  ÀÄgenerate_tone  0/512  Ram=26
    ³  ³     ÀÄ*
-   ³  ÃÄmelodia_inicio  0/192  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄmelodia_sleep  0/98  Ram=1
-   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
-   ³  ³  ÃÄgenerate_tone  0/512  Ram=26
-   ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
-   ³  ³  ÃÄgenerate_tone  0/512  Ram=26
-   ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
-   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
-   ³  ³  ÀÄgenerate_tone  0/512  Ram=26
-   ³  ³     ÀÄ*
    ³  ÃÄ@ITOF  0/54  Ram=2
    ³  ÃÄ@MULFF  0/246  Ram=11
    ³  ÃÄ@DIVFF  0/350  Ram=14
@@ -67,8 +54,17 @@
    ³  ³  ÃÄ@DIV3232  0/148  Ram=13
    ³  ³  ÀÄ@DIV3232  0/148  Ram=13
    ³  ÃÄ@PSTRINGCN_57600_31766_31767  0/32  Ram=3
-   ³  ÃÄmelodia_sleep  0/98  Ram=1
-   ³  ³  ÀÄ*
+   ³  ÃÄmelodia_sleep  0/100  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄgenerate_tone  0/512  Ram=26
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄgenerate_tone  0/512  Ram=26
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÀÄgenerate_tone  0/512  Ram=26
+   ³  ³     ÀÄ*
    ³  ÃÄconvierte_bits_a_bytes  0/138  Ram=3
    ³  ÃÄmelodia_wake_up  0/112  Ram=0
    ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
@@ -84,7 +80,7 @@
    ³  ³  ³  ÀÄ*
    ³  ³  ÀÄ@delay_ms1  0/40  Ram=1
    ³  ÃÄconvierte_bits_a_bytes  0/138  Ram=3
-   ³  ÃÄ@goto29626  0/40  Ram=0
+   ³  ÃÄ@goto37098  0/40  Ram=0
    ³  ÃÄejecucion_pwm  0/448  Ram=3
    ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
    ³  ³  ÀÄverificar_level_ir  0/416  Ram=4
@@ -149,7 +145,7 @@
    ³  ³  ÀÄ*
    ³  ÃÄgenerate_tone  0/512  Ram=26
    ³  ³  ÀÄ*
-   ³  ÃÄ@goto29697  0/40  Ram=0
+   ³  ÃÄ@goto37153  0/40  Ram=0
    ³  ÃÄgenerate_tone  0/512  Ram=26
    ³  ³  ÀÄ*
    ³  ÃÄgenerate_tone  0/512  Ram=26

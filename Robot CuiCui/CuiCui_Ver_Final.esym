@@ -1,11 +1,11 @@
-F N "Users" 0 43 ""
-D G "__PCH__" 0 43 ""5.081d""
-D G "__DEVICE__" 0 43 "2520"
-D G "__DATE__" 0 43 ""20-Nov-18""
-D G "__TIME__" 0 43 ""23:44:13""
-D G "_UNICODE" 0 43 ""?""
-D G "__EVAL" 0 43 ""?"" "#include "C:\Users\Jose\Desktop\Robot CuiCui\CuiCui_Ver_Final.h""
-c L "set_tris_a" 2 1 6 "FUNCTION"
+F N "z" 0 42 ""
+D G "__PCH__" 0 42 ""5.081d""
+D G "__DEVICE__" 0 42 "2520"
+D G "__DATE__" 0 42 ""20-Nov-18""
+D G "__TIME__" 0 42 ""23:50:54""
+D G "_UNICODE" 0 42 ""?""
+D G "__EVAL" 0 42 ""?"" "Standard Header file for the PIC18F2520 device ////////////////"
+c L "set_tris_a" 2 3 6 "FUNCTION"
 f N "set_tris_a" 2 43 ""
 v L "value" 2 43 "int8" `55 
 f B "set_tris_a" 2 43 "void(int8 value)" `54 
@@ -118,7 +118,7 @@ d G "putc" 2 114 "putchar"
 d G "fputc" 2 115 "putchar"
 d G "fgets" 2 116 "gets"
 d G "fputs" 2 117 "puts"
-c L "output_drive" 2 1 3 "FUNCTION"
+c L "output_drive" 2 3 3 "FUNCTION"
 f N "restart_cause" 2 122 ""
 f B "restart_cause" 2 122 "int8()" `101 
 f N "reset_cpu" 2 123 ""
@@ -137,7 +137,7 @@ d G "WDT_FROM_SLEEP" 2 132 "3"
 d G "RESET_INSTRUCTION" 2 133 "0"
 d G "SLEEP_FULL" 2 136 "0" "Default"
 d G "SLEEP_IDLE" 2 137 "1" "Clock and peripherals don't stop"
-c L "sleep" 2 1 5 "FUNCTION"
+c L "sleep" 2 3 5 "FUNCTION"
 f N "setup_timer_0" 2 144 ""
 v L "mode" 2 144 "int8" `107 
 f B "setup_timer_0" 2 144 "void(int8 mode)" `106 
@@ -183,7 +183,7 @@ d G "RTCC_DIV_128" 2 181 "6"
 d G "RTCC_DIV_256" 2 182 "7"
 d G "RTCC_OFF" 2 183 "0x80"
 d G "RTCC_8_BIT" 2 184 "0x40"
-c L "get_rtcc" 2 1 8 "FUNCTION"
+c L "get_rtcc" 2 3 8 "FUNCTION"
 f N "setup_wdt" 2 195 ""
 v L "mode" 2 195 "int16" `118 
 f B "setup_wdt" 2 195 "void(int16 mode)" `117 
@@ -207,7 +207,7 @@ d G "WDT_16S" 2 213 "0x1B00"
 d G "WDT_32S" 2 214 "0x1D00"
 d G "WDT_64S" 2 215 "0x1F00"
 d G "WDT_128S" 2 216 "0x2100"
-c L "restart_wdt" 2 1 3 "FUNCTION"
+c L "restart_wdt" 2 3 3 "FUNCTION"
 f N "setup_timer_1" 2 221 ""
 v L "mode" 2 221 "int16" `121 
 f B "setup_timer_1" 2 221 "void(int16 mode)" `120 
@@ -225,7 +225,7 @@ d G "T1_DIV_BY_1" 2 233 "0"
 d G "T1_DIV_BY_2" 2 234 "0x10"
 d G "T1_DIV_BY_4" 2 235 "0x20"
 d G "T1_DIV_BY_8" 2 236 "0x30"
-c L "set_timer1" 2 1 3 "FUNCTION"
+c L "set_timer1" 2 3 3 "FUNCTION"
 f N "setup_timer_2" 2 241 ""
 v L "mode" 2 241 "int8" `126 
 v L "period" 2 241 "int8" `127 
@@ -240,7 +240,7 @@ d G "T2_DISABLED" 2 245 "0"
 d G "T2_DIV_BY_1" 2 246 "4"
 d G "T2_DIV_BY_4" 2 247 "5"
 d G "T2_DIV_BY_16" 2 248 "6"
-c L "set_timer2" 2 1 3 "FUNCTION"
+c L "set_timer2" 2 3 3 "FUNCTION"
 f N "setup_timer_3" 2 253 ""
 v L "mode" 2 253 "int16" `133 
 f B "setup_timer_3" 2 253 "void(int16 mode)" `132 
@@ -259,7 +259,7 @@ d G "T3_DIV_BY_4" 2 265 "0x20"
 d G "T3_DIV_BY_8" 2 266 "0x30"
 d G "T3_CCP1_TO_2" 2 269 "0x48"
 d G "T3_CCP2" 2 270 "0x8"
-c L "set_timer3" 2 1 4 "FUNCTION"
+c L "set_timer3" 2 3 4 "FUNCTION"
 f N "setup_ccp1" 2 276 ""
 v L "mode" 2 276 "int32" `138 
 f B "setup_ccp1" 2 276 "void(int32 mode)" `137 
@@ -284,8 +284,8 @@ d G "CCP_PWM" 2 290 "0x0C"
 d G "CCP_PWM_PLUS_1" 2 291 "0x1c"
 d G "CCP_PWM_PLUS_2" 2 292 "0x2c"
 d G "CCP_PWM_PLUS_3" 2 293 "0x3c"
-c L "set_pwm1_duty" 2 1 1 "FUNCTION"
-c L "set_pwm1_duty" 2 1 1 "FUNCTION"
+c L "set_pwm1_duty" 2 3 1 "FUNCTION"
+c L "set_pwm1_duty" 2 3 1 "FUNCTION"
 f N "setup_ccp2" 2 301 ""
 v L "mode" 2 301 "int32" `148 
 f B "setup_ccp2" 2 301 "void(int32 mode)" `147 
@@ -296,7 +296,7 @@ f B "setup_ccp2" 2 302 "void(int32 mode,int8 pwm)" `149
 f N "set_pwm2_duty" 2 303 ""
 v L "value" 2 303 "int16" `153 
 f B "set_pwm2_duty" 2 303 "void(int16 value)" `152 
-c L "set_pwm2_duty" 2 1 3 "FUNCTION"
+c L "set_pwm2_duty" 2 3 3 "FUNCTION"
 f N "setup_spi" 2 311 ""
 v L "mode" 2 311 "int32" `158 
 f B "setup_spi" 2 311 "void(int32 mode)" `157 
@@ -339,7 +339,7 @@ d G "SPI_SAMPLE_AT_MIDDLE" 2 336 "0x0000"
 d G "SPI_SAMPLE_AT_END" 2 337 "0x8000"
 d G "SPI_L_TO_H" 2 340 "SPI_SCK_IDLE_LOW"
 d G "SPI_H_TO_L" 2 341 "SPI_SCK_IDLE_HIGH"
-c L "spi_data_is_in2" 2 1 2 "FUNCTION"
+c L "spi_data_is_in2" 2 3 2 "FUNCTION"
 f N "setup_uart" 2 345 ""
 v L "baud" 2 345 "int32" `174 
 f B "setup_uart" 2 345 "void(int32 baud)" `173 
@@ -370,7 +370,7 @@ d G "UART_AUTODETECT" 2 356 "8"
 d G "UART_AUTODETECT_NOWAIT" 2 357 "9"
 d G "UART_WAKEUP_ON_RDA" 2 358 "10"
 d G "UART_SEND_BREAK" 2 359 "13"
-c L "set_uart_speed" 2 1 3 "FUNCTION"
+c L "set_uart_speed" 2 3 3 "FUNCTION"
 f N "setup_comparator" 2 364 ""
 v L "mode" 2 364 "int32" `192 
 f B "setup_comparator" 2 364 "void(int32 mode)" `191  "Constants used in setup_comparator() are:"
@@ -384,7 +384,7 @@ d G "A0_VR_A1_VR" 2 372 "0x3ff06"
 d G "A3_VR_A2_VR" 2 373 "0xcff0e"
 d G "CP1_INVERT" 2 374 "0x0000010"
 d G "CP2_INVERT" 2 375 "0x0000020"
-c L "setup_comparator" 2 1 2 "FUNCTION"
+c L "setup_comparator" 2 3 2 "FUNCTION"
 f N "setup_vref" 2 382 ""
 v L "mode" 2 382 "int8" `196 
 f B "setup_vref" 2 382 "void(int8 mode)" `195  "Constants used in setup_vref() are:"
@@ -392,7 +392,7 @@ d G "VREF_LOW" 2 384 "0xa0"
 d G "VREF_HIGH" 2 385 "0x80"
 d G "VREF_F5" 2 387 "0x40"
 d G "VREF_COMP" 2 388 "0x10"
-c L "setup_vref" 2 1 2 "FUNCTION"
+c L "setup_vref" 2 3 2 "FUNCTION"
 f N "setup_low_volt_detect" 2 392 ""
 v L "mode" 2 392 "int8" `198 
 f B "setup_low_volt_detect" 2 392 "void(int8 mode)" `197  "Constants used in setup_low_volt_detect() are:"
@@ -414,7 +414,7 @@ d G "LVD_22" 2 408 "0x11"
 d G "LVD_21" 2 409 "0x10"
 d G "LVD_TRIGGER_BELOW" 2 411 "0"
 d G "LVD_TRIGGER_ABOVE" 2 412 "0x80"
-c L "setup_low_volt_detect" 2 1 2 "FUNCTION"
+c L "setup_low_volt_detect" 2 3 2 "FUNCTION"
 f N "setup_oscillator" 2 417 ""
 v L "mode" 2 417 "int8" `200 
 f B "setup_oscillator" 2 417 "int8(int8 mode)" `199 
@@ -441,7 +441,7 @@ d G "OSC_PLL_ON" 2 438 "0x4000"
 d G "OSC_PLL_OFF" 2 439 "0"
 d G "OSC_STATE_STABLE" 2 443 "4"
 d G "OSC_STATE_EXT_RUNNING" 2 444 "8"
-c L "setup_oscillator" 2 1 4 "FUNCTION"
+c L "setup_oscillator" 2 3 4 "FUNCTION"
 f N "setup_adc" 2 451 ""
 v L "mode" 2 451 "int16" `205 
 f B "setup_adc" 2 451 "void(int16 mode)" `204 
@@ -473,7 +473,7 @@ d G "ADC_TAD_MUL_8" 2 471 "0x20"
 d G "ADC_TAD_MUL_12" 2 472 "0x28"
 d G "ADC_TAD_MUL_16" 2 473 "0x30"
 d G "ADC_TAD_MUL_20" 2 474 "0x38"
-c L "adc_done" 2 1 1 "FUNCTION"
+c L "adc_done" 2 3 1 "FUNCTION"
 f N "setup_adc_ports" 2 477 ""
 v L "pins" 2 477 "int8" `211 
 f B "setup_adc_ports" 2 477 "void(int8 pins)" `210 
@@ -524,7 +524,7 @@ d G "VSS_VREF" 2 515 "0x10" "Range 0-VrefH"
 d G "ADC_START_AND_READ" 2 518 "7" "This is the default if nothing is specified"
 d G "ADC_START_ONLY" 2 519 "1"
 d G "ADC_READ_ONLY" 2 520 "6"
-c L "set_adc_channel" 2 1 3 "FUNCTION"
+c L "set_adc_channel" 2 3 3 "FUNCTION"
 f N "abs" 2 526 ""
 v L "x" 2 526 "sint8" `223 
 f B "abs" 2 526 "sint8(sint8 x)" `222 
@@ -1096,7 +1096,7 @@ f B "get_capture_event" 2 711 "int8()" `608
 f N "get_capture_event" 2 712 ""
 v L "stream" 2 712 "int8" `610 
 f B "get_capture_event" 2 712 "int8(int8 stream)" `609  "Enviroment Prototypes:"
-c L "get_capture_event" 2 1 2 "FUNCTION"
+c L "get_capture_event" 2 3 2 "FUNCTION"
 f N "goto_address" 2 725 ""
 v L "address" 2 725 "int16" `612 
 f B "goto_address" 2 725 "void(int16 address)" `611 
@@ -1131,7 +1131,7 @@ f N "write_eeprom" 2 746 ""
 v L "address" 2 746 "int8" `633 
 v L "value" 2 746 "int8" `634 
 f B "write_eeprom" 2 746 "void(int8 address,int8 value)" `632  "INT"
-c L "write_eeprom" 2 1 4 "FUNCTION"
+c L "write_eeprom" 2 3 4 "FUNCTION"
 f N "enable_interrupts" 2 753 ""
 v L "interrupt" 2 753 "int32" `636 
 f B "enable_interrupts" 2 753 "void(int32 interrupt)" `635 
@@ -1185,7 +1185,7 @@ d G "INT_COMP" 2 789 "0x00A040"
 d G "INT_EEPROM" 2 790 "0x00A010"
 d G "INT_OSCF" 2 791 "0x00A080"
 C L "jump_to_isr" 1 9 1 "FUNCTION"
-D G "MUSIC_NOTES" 0 8 "TRUE"
+D G "MUSIC_NOTES" 0 7 "TRUE"
 D G "MATH_H" 3 30 ""
 D G "PI" 3 35 "3.1415926535897932"
 D G "SQRT2" 3 38 "1.4142135623730950"
@@ -1407,177 +1407,176 @@ C L "generate_tone" 4 1 1 "FUNCTION"
 C L "generate_tone" 4 1 1 "FUNCTION"
 C L "generate_tone" 4 1 1 "FUNCTION"
 C L "generate_tone" 4 1 1 "FUNCTION"
-V G "Version" 0 18 "[1]" `866 
-V G "total_bits" 0 19 "int8" `868 
-V G "total_bytes" 0 20 "int8" `870 
-V G "total_datos" 0 21 "int8" `872 
-V G "UP" 0 22 "int8" `874 
-V G "SOUND" 0 23 "int8" `876 
-V G "LEFT" 0 24 "int8" `878 
-V G "GO" 0 25 "int8" `880 
-V G "RIGHT" 0 26 "int8" `882 
-V G "DOWN" 0 28 "int8" `884 
-V G "RESET" 0 29 "int8" `886 
-V G "mov_recto" 0 30 "int16" `888 
-V G "mov_giro" 0 30 "int16" `890 
-V G "vel1" 0 32 "int8" `892 
-V G "vel2" 0 33 "int8" `894 
-V G "vel3" 0 34 "int8" `896 
-V G "mov_ant" 0 38 "int8" `898 
-V G "mov_act" 0 38 "int8" `899 
-V G "datos" 0 39 "int8[25]" `900 
-V G "valorR" 0 41 "int8" `901 
-V G "q" 0 43 "int16" `902 
-V G "level_ir_b" 0 43 "int16" `903 
-V G "level_source_b" 0 43 "int16" `904 
-V G "distancia_0" 0 43 "int16" `905 
-V G "distancia_1" 0 43 "int16" `906 
-V G "diferencia_T0" 0 43 "int16" `907 
-V G "diferencia_T1" 0 43 "int16" `908 
-V G "distancia_recorrida_1" 0 43 "int16" `909 
-V G "distancia_recorrida_2" 0 43 "int16" `910 
-V G "control_M1" 0 44 "int16" `911 
-V G "control_M2" 0 44 "int16" `912 
-V G "valor_pwm" 0 44 "int16" `913 
-V G "vel_pwm" 0 44 "int16" `914 
-V G "T0_Act" 0 45 "int16" `915 
-V G "T1_Act" 0 45 "int16" `916 
-V G "T0_Ant" 0 45 "int16" `917 
-V G "T1_Ant" 0 45 "int16" `918 
-V G "Delta_T0" 0 45 "int16" `919 
-V G "Delta_T1" 0 45 "int16" `920 
-V G "Delta_T0_ant" 0 45 "int16" `921 
-V G "counter_sleep" 0 46 "int16" `922 
-V G "p" 0 48 "float" `923 
-V G "level_ir" 0 48 "float" `924 
-V G "level_source" 0 48 "float" `925 
-V G "a" 0 49 "float" `926 
-V G "b" 0 49 "float" `928 
-V G "c" 0 49 "float" `930 
-V G "a2" 0 49 "float" `932 
-V G "b2" 0 49 "float" `934 
-V G "c2" 0 49 "float" `936 
-V G "rV" 0 50 "float" `938 
-V G "eV" 0 50 "float" `939 
-V G "iV" 0 50 "float" `940 
-V G "dV" 0 50 "float" `941 
-V G "yV" 0 50 "float" `942 
-V G "uV" 0 50 "float" `943 
-V G "iV0" 0 50 "float" `944 
-V G "eV0" 0 50 "float" `945 
-V G "uV2" 0 50 "float" `946 
-V G "eD" 0 51 "float" `947 
-V G "iD" 0 51 "float" `948 
-V G "dD" 0 51 "float" `949 
-V G "iD0" 0 51 "float" `950 
-V G "eD0" 0 51 "float" `951 
-V G "uD" 0 51 "float" `952 
-V G "max" 0 52 "float" `953 
-V G "min" 0 52 "float" `955 
-V G "velocidad_ref" 0 53 "float" `957 
-V G "delta_recorrido" 0 53 "float" `958 
-V G "velocidad_T0" 0 53 "float" `959 
-V G "times_cr" 0 56 "int16[10]" `960 
-V G "sbits" 0 57 "int8[10]" `961 
-V G "first_ext" 0 58 "int1" `962 
-V G "start_recived" 0 59 "int1" `963 
-V G "i" 0 60 "int8" `964 
-V G "j" 0 60 "int8" `965 
-V G "k" 0 60 "int8" `966 
-V G "tt" 0 61 "int16" `967 
-V G "tti" 0 61 "int16" `968 
-V G "t" 0 61 "int16" `969 
-V G "ntbits" 0 62 "int8" `970 
-V G "hay_dato" 0 63 "int1" `971 
-V G "contador" 0 64 "int8" `972 
-V G "bits" 0 65 "int8[8]" `973 
-V G "bytes" 0 66 "int8[2]" `974 
-V G "identificador" 0 67 "int8" `975 
-V G "dato_ir" 0 68 "int8" `976 
-V G "wake_up" 0 69 "int1" `977 
-V G "out_sleep" 0 69 "int1" `978 
-V G "temp" 0 70 "int1" `979 
-V G "control_tipo" 0 71 "int1" `980  "void limpia_bits(void);"
-F N "limpia_bits" 0 74 ""
-F G "limpia_bits" 0 74 "void()" `981 
-C L "timer3_isr" 0 11 1 "FUNCTION"
-F N "timer3_isr" 0 83 ""
-F G "timer3_isr" 0 83 "void()" `982 
-C L "timer3_isr" 0 11 4 "FUNCTION"
-C L "timer3_isr" 0 11 1 "FUNCTION"
-C L "timer3_isr" 0 11 1 "FUNCTION"
-C L "timer3_isr" 0 11 1 "FUNCTION"
-C L "timer3_isr" 0 11 1 "FUNCTION"
-C L "serial_isr" 0 11 1 "FUNCTION"
-F N "serial_isr" 0 153 ""
-F G "serial_isr" 0 153 "void()" `983 
-C L "comp_isr" 0 11 1 "FUNCTION"
-F N "comp_isr" 0 161 ""
-F G "comp_isr" 0 161 "void()" `984 
-C L "ext_isr" 0 11 1 "FUNCTION"
-F N "ext_isr" 0 173 ""
-F G "ext_isr" 0 173 "void()" `985  "Obtengo datos de Timer0"
-C L "ext_isr" 0 11 1 "FUNCTION"
-C L "ext_isr" 0 11 1 "FUNCTION"
-C L "ext_isr" 0 11 1 "FUNCTION"
-C L "ext_isr" 0 11 1 "FUNCTION"
-F N "calculo_del_error" 0 205 ""
-F G "calculo_del_error" 0 205 "void()" `986 
-F N "melodia_inicio" 0 404 ""
-F G "melodia_inicio" 0 404 "void()" `991 
-F N "melodia_sleep" 0 421 ""
-F G "melodia_sleep" 0 421 "void()" `992 
-F N "melodia_wake_up" 0 431 ""
-F G "melodia_wake_up" 0 431 "void()" `993 
-F N "melodia_baja_bateria" 0 443 ""
-F G "melodia_baja_bateria" 0 443 "void()" `994 
-F N "verificar_level_ir" 0 452 ""
-F G "verificar_level_ir" 0 452 "void()" `995 
-F N "level_source_ref" 0 465 ""
-F G "level_source_ref" 0 465 "void()" `996 
-C L "level_source_ref" 0 11 1 "FUNCTION"
-F N "ejecucion_pwm" 0 477 ""
-F G "ejecucion_pwm" 0 477 "void()" `997 
-C L "ejecucion_pwm" 0 11 1 "FUNCTION"
-C L "ejecucion_pwm" 0 11 1 "FUNCTION"
-C L "ejecucion_pwm" 0 11 13 "FUNCTION"
-C L "ejecucion_pwm" 0 11 1 "FUNCTION"
-C L "ejecucion_pwm" 0 11 1 "FUNCTION"
-C L "ejecucion_pwm" 0 11 7 "FUNCTION"
-C L "ejecucion_pwm" 0 11 3 "FUNCTION"
-C L "ejecucion_pwm" 0 11 1 "FUNCTION"
-F N "convierte_bits_a_bytes" 0 584 ""
-F G "convierte_bits_a_bytes" 0 584 "void()" `998 
-F N "muestra_bits" 0 598 ""
-F G "muestra_bits" 0 598 "void()" `999 
-C L "muestra_bits" 0 11 2 "FUNCTION"
-F N "MAIN" 0 629 ""
-F G "MAIN" 0 629 "void()" `1026 
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 2 "FUNCTION"
-C L "MAIN" 0 11 3 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 6 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 4 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 11 "FUNCTION"
-C L "MAIN" 0 11 2 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 11 "FUNCTION"
-C L "MAIN" 0 11 2 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 11 "FUNCTION"
-C L "MAIN" 0 11 2 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 11 "FUNCTION"
-C L "MAIN" 0 11 1 "FUNCTION"
+V G "Version" 0 17 "[1]" `866 
+V G "total_bits" 0 18 "int8" `868 
+V G "total_bytes" 0 19 "int8" `870 
+V G "total_datos" 0 20 "int8" `872 
+V G "UP" 0 21 "int8" `874 
+V G "SOUND" 0 22 "int8" `876 
+V G "LEFT" 0 23 "int8" `878 
+V G "GO" 0 24 "int8" `880 
+V G "RIGHT" 0 25 "int8" `882 
+V G "DOWN" 0 27 "int8" `884 
+V G "RESET" 0 28 "int8" `886 
+V G "mov_recto" 0 29 "int16" `888 
+V G "mov_giro" 0 29 "int16" `890 
+V G "vel1" 0 31 "int8" `892 
+V G "vel2" 0 32 "int8" `894 
+V G "vel3" 0 33 "int8" `896 
+V G "mov_ant" 0 37 "int8" `898 
+V G "mov_act" 0 37 "int8" `899 
+V G "datos" 0 38 "int8[25]" `900 
+V G "valorR" 0 40 "int8" `901 
+V G "q" 0 42 "int16" `902 
+V G "level_ir_b" 0 42 "int16" `903 
+V G "level_source_b" 0 42 "int16" `904 
+V G "distancia_0" 0 42 "int16" `905 
+V G "distancia_1" 0 42 "int16" `906 
+V G "diferencia_T0" 0 42 "int16" `907 
+V G "diferencia_T1" 0 42 "int16" `908 
+V G "distancia_recorrida_1" 0 42 "int16" `909 
+V G "distancia_recorrida_2" 0 42 "int16" `910 
+V G "control_M1" 0 43 "int16" `911 
+V G "control_M2" 0 43 "int16" `912 
+V G "valor_pwm" 0 43 "int16" `913 
+V G "vel_pwm" 0 43 "int16" `914 
+V G "T0_Act" 0 44 "int16" `915 
+V G "T1_Act" 0 44 "int16" `916 
+V G "T0_Ant" 0 44 "int16" `917 
+V G "T1_Ant" 0 44 "int16" `918 
+V G "Delta_T0" 0 44 "int16" `919 
+V G "Delta_T1" 0 44 "int16" `920 
+V G "Delta_T0_ant" 0 44 "int16" `921 
+V G "counter_sleep" 0 45 "int16" `922 
+V G "p" 0 47 "float" `923 
+V G "level_ir" 0 47 "float" `924 
+V G "level_source" 0 47 "float" `925 
+V G "a" 0 48 "float" `926 
+V G "b" 0 48 "float" `928 
+V G "c" 0 48 "float" `930 
+V G "a2" 0 48 "float" `932 
+V G "b2" 0 48 "float" `934 
+V G "c2" 0 48 "float" `936 
+V G "rV" 0 49 "float" `938 
+V G "eV" 0 49 "float" `939 
+V G "iV" 0 49 "float" `940 
+V G "dV" 0 49 "float" `941 
+V G "yV" 0 49 "float" `942 
+V G "uV" 0 49 "float" `943 
+V G "iV0" 0 49 "float" `944 
+V G "eV0" 0 49 "float" `945 
+V G "uV2" 0 49 "float" `946 
+V G "eD" 0 50 "float" `947 
+V G "iD" 0 50 "float" `948 
+V G "dD" 0 50 "float" `949 
+V G "iD0" 0 50 "float" `950 
+V G "eD0" 0 50 "float" `951 
+V G "uD" 0 50 "float" `952 
+V G "max" 0 51 "float" `953 
+V G "min" 0 51 "float" `955 
+V G "velocidad_ref" 0 52 "float" `957 
+V G "delta_recorrido" 0 52 "float" `958 
+V G "velocidad_T0" 0 52 "float" `959 
+V G "times_cr" 0 55 "int16[10]" `960 
+V G "sbits" 0 56 "int8[10]" `961 
+V G "first_ext" 0 57 "int1" `962 
+V G "start_recived" 0 58 "int1" `963 
+V G "i" 0 59 "int8" `964 
+V G "j" 0 59 "int8" `965 
+V G "k" 0 59 "int8" `966 
+V G "tt" 0 60 "int16" `967 
+V G "tti" 0 60 "int16" `968 
+V G "t" 0 60 "int16" `969 
+V G "ntbits" 0 61 "int8" `970 
+V G "hay_dato" 0 62 "int1" `971 
+V G "contador" 0 63 "int8" `972 
+V G "bits" 0 64 "int8[8]" `973 
+V G "bytes" 0 65 "int8[2]" `974 
+V G "identificador" 0 66 "int8" `975 
+V G "dato_ir" 0 67 "int8" `976 
+V G "wake_up" 0 68 "int1" `977 
+V G "out_sleep" 0 68 "int1" `978 
+V G "temp" 0 69 "int1" `979 
+V G "control_tipo" 0 70 "int1" `980  "void limpia_bits(void);"
+F N "limpia_bits" 0 73 ""
+F G "limpia_bits" 0 73 "void()" `981 
+C L "timer3_isr" 0 10 1 "FUNCTION"
+F N "timer3_isr" 0 82 ""
+F G "timer3_isr" 0 82 "void()" `982 
+C L "timer3_isr" 0 10 4 "FUNCTION"
+C L "timer3_isr" 0 10 1 "FUNCTION"
+C L "timer3_isr" 0 10 1 "FUNCTION"
+C L "timer3_isr" 0 10 1 "FUNCTION"
+C L "timer3_isr" 0 10 1 "FUNCTION"
+C L "serial_isr" 0 10 1 "FUNCTION"
+F N "serial_isr" 0 152 ""
+F G "serial_isr" 0 152 "void()" `983 
+C L "comp_isr" 0 10 1 "FUNCTION"
+F N "comp_isr" 0 160 ""
+F G "comp_isr" 0 160 "void()" `984 
+C L "ext_isr" 0 10 1 "FUNCTION"
+F N "ext_isr" 0 172 ""
+F G "ext_isr" 0 172 "void()" `985  "Obtengo datos de Timer0"
+C L "ext_isr" 0 10 1 "FUNCTION"
+C L "ext_isr" 0 10 1 "FUNCTION"
+C L "ext_isr" 0 10 1 "FUNCTION"
+C L "ext_isr" 0 10 1 "FUNCTION"
+F N "calculo_del_error" 0 204 ""
+F G "calculo_del_error" 0 204 "void()" `986 
+F N "melodia_inicio" 0 403 ""
+F G "melodia_inicio" 0 403 "void()" `991 
+F N "melodia_sleep" 0 420 ""
+F G "melodia_sleep" 0 420 "void()" `992 
+F N "melodia_wake_up" 0 430 ""
+F G "melodia_wake_up" 0 430 "void()" `993 
+F N "melodia_baja_bateria" 0 442 ""
+F G "melodia_baja_bateria" 0 442 "void()" `994 
+F N "verificar_level_ir" 0 451 ""
+F G "verificar_level_ir" 0 451 "void()" `995 
+F N "level_source_ref" 0 464 ""
+F G "level_source_ref" 0 464 "void()" `996 
+C L "level_source_ref" 0 10 1 "FUNCTION"
+F N "ejecucion_pwm" 0 476 ""
+F G "ejecucion_pwm" 0 476 "void()" `997 
+C L "ejecucion_pwm" 0 10 1 "FUNCTION"
+C L "ejecucion_pwm" 0 10 1 "FUNCTION"
+C L "ejecucion_pwm" 0 10 13 "FUNCTION"
+C L "ejecucion_pwm" 0 10 1 "FUNCTION"
+C L "ejecucion_pwm" 0 10 1 "FUNCTION"
+C L "ejecucion_pwm" 0 10 7 "FUNCTION"
+C L "ejecucion_pwm" 0 10 3 "FUNCTION"
+C L "ejecucion_pwm" 0 10 1 "FUNCTION"
+F N "convierte_bits_a_bytes" 0 583 ""
+F G "convierte_bits_a_bytes" 0 583 "void()" `998 
+F N "muestra_bits" 0 597 ""
+F G "muestra_bits" 0 597 "void()" `999 
+C L "muestra_bits" 0 10 2 "FUNCTION"
+F N "MAIN" 0 628 ""
+F G "MAIN" 0 628 "void()" `1026 
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 3 "FUNCTION"
+C L "MAIN" 0 10 3 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 6 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 4 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 11 "FUNCTION"
+C L "MAIN" 0 10 2 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 11 "FUNCTION"
+C L "MAIN" 0 10 2 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 11 "FUNCTION"
+C L "MAIN" 0 10 2 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
+C L "MAIN" 0 10 11 "FUNCTION"
+C L "MAIN" 0 10 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

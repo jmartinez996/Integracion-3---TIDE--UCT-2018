@@ -660,16 +660,16 @@ void main() {
 
   limpia_bits();
                             //Melodía de Inicio
-  //melodia_inicio();
+  melodia_inicio();
   //Recibo de un dato por arduino
-  
+  /*
   while(True){
    valorR = kbhit();
    if(ValorR == 1){
       melodia_inicio();
       valorR=0;
    }
-  }
+  }*/
   
   disable_interrupts(int_timer3);
   setup_timer_3(T3_INTERNAL | T3_DIV_BY_8);

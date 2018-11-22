@@ -1,5 +1,5 @@
    
-#include "C:\Users\ellio\OneDrive\Documentos\Intrgracion 3\Integracion-3---TIDE--UCT-2018\Robot CuiCui\CuiCui_Ver_Final.h"
+#include "C:\Users\Jose\Desktop\Robot CuiCui\CuiCui_Ver_Final.h"
 
 #byte T1CON = 0x0FCD
 #byte PIR2 = 0x0FA1
@@ -660,16 +660,16 @@ void main() {
 
   limpia_bits();
                             //Melodía de Inicio
-  //melodia_inicio();
+  melodia_inicio();
   //Recibo de un dato por arduino
-  
+  /*
   while(True){
    valorR = kbhit();
    if(ValorR == 1){
       melodia_inicio();
       valorR=0;
    }
-  }
+  }*/
   
   disable_interrupts(int_timer3);
   setup_timer_3(T3_INTERNAL | T3_DIV_BY_8);

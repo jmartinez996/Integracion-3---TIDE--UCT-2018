@@ -660,7 +660,7 @@ void main() {
 
   limpia_bits();
                             //Melodía de Inicio
-  //melodia_inicio();
+  melodia_inicio();
   //Recibo de un dato por arduino
   
   while(True){

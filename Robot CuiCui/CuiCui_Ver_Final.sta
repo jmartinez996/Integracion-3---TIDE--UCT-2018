@@ -1,6 +1,6 @@
 
-ROM used:   8490/32768 (26%)
-            8490/32768 (26%) including unused fragments
+ROM used:   8476/32768 (26%)
+            8476/32768 (26%) including unused fragments
 
             2.1 Average locations per line
             9.8 Average locations per statement
@@ -8,18 +8,18 @@ ROM used:   8490/32768 (26%)
 RAM used:   240/1536 (16%) at main() level
             295/1536 (19%) worst case
 
-Stack used: 6 worst case (4 in main + 2 for interrupts)
+Stack used: 5 worst case (3 in main + 2 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  998   587  68  CuiCui_Ver_Final.c
+  990   582  68  CuiCui_Ver_Final.c
    33     0   0  CuiCui_Ver_Final.h
   794     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F2520.h
  2227   258  30  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\math.h
    81    21   2  tones_c5.c
 ----- -----
- 4133   866 Total
+ 4125   861 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -42,8 +42,8 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     24   0    0     50  2.0  serial_isr
 0     24   0    0     69  1.6  comp_isr
 0    200   1    2    547  5.7  ext_isr
-0    192   1    1    367  1.9  melodia_inicio
-0     98   1    1    147  1.8  melodia_sleep
+0    194   1    1    367  1.9  melodia_inicio
+0    100   1    1    147  1.8  melodia_sleep
 0    112   1    0    255  2.3  melodia_wake_up
 0    416   2    4    294  4.5  verificar_level_ir
 0    448   3    3   1906  6.4  ejecucion_pwm
@@ -55,34 +55,34 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     14   0    0             @const1020
 0     28   0    0             @const1021
 0     10   0    0             @const1022
-0   1826  11    4   8976 12.9  MAIN
+0   1808  11    4   8816 12.9  MAIN
 0     38   0    0             @const1030
 0     22   0    0             @const1031
 0     64   0    5             @FTOSD
 0    408   2   13             @PRINTF_L32D_57600_31766_31767FPFPF
 0     18   0    0             @const1037
-0     40   0    0             @goto29626
-0     40   0    0             @goto29697
+0     40   0    0             @goto37098
+0     40   0    0             @goto37153
  Inline         0             @cinit1
 
 Program metrics:
     Functions               14
-    Statements              866
-    Comments                574
-    Volume (V)              21580
+    Statements              861
+    Comments                569
+    Volume (V)              21402
     Difficulty (D)          65.7
-    Effort to implement (E) 1417214
-    Time to implement (T)   21 hours, 52 minutes
+    Effort to implement (E) 1405059
+    Time to implement (T)   21 hours, 41 minutes
     Est Delivered Bugs (B)  4
-    Cyclomatic Complexity   50
-    Maintainability (MI)    41
+    Cyclomatic Complexity   49
+    Maintainability (MI)    44
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     0  4  
 00008-000D0   202  0  
-000D2-07FFE  8284  24274  
+000D2-07FFE  8270  24288  
 
 
 

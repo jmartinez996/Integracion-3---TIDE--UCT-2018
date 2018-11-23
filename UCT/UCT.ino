@@ -11,10 +11,10 @@
 //Set pin de Pir
 #define PIRPin 4 // Pin de entrada
 // PINES para motores
-#define  izqA 5;
-#define  izqB 6;
-#define  derA 9;
-#define  derB 10;
+#define  izqA 5
+#define  izqB 6
+#define  derA 9
+#define  derB 10
 int velocidad = 255;          // velocidad de los motores (0-255)
 
 //seteo de pines sensor proximidad
@@ -28,6 +28,7 @@ int temp;
 int humedad;
 int dist;
 int piir;
+String aData[4];
 
 
 //Constructor sensor proximidad y temmperatura y humedad
@@ -91,16 +92,24 @@ void setup()
 void loop()
 {
   shtx TH;
-  temp = (TH.GetTempe ratura());
+  temp = (TH.GetTemperatura());
   humedad =(TH.GetHumedad());
- 
+  aData[0] = String(temp);
+  aData[1] = String(humedad);
 
   sProximity Px; //instacia clase sProximity
   //Muestra valores sensor de proximidad en cm
   dist = (Px.GetDistance());
+  aData[2] = String(dist);
 
   spir sp;
   piir=(sp.GetValue());//imprimimos el 1 si detecta movimiento y 0 si no
+  aData[3] = String(piir);
+
+  String dv = ",";
+  String data = aData[0]+dv+aData[1]+dv+aData[2]+dv+aData[3];
+  Serial.println(data);
+  
   /*
   Serial.print("Temperatura: ");
   Serial.print(temp);

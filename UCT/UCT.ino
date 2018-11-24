@@ -3,11 +3,6 @@
 //Set pin de temperatura y humedad
 #define dataPin  2
 #define clockPin 3
-//define pines para Led (Provisorios) //COMO SON PINES PROVISORIOS SACAR CAGANDO NOMAS 
-#define LEDPin1 13
-#define LEDPin2 12
-#define LEDPin3 11
-#define LEDPin4 10        // CAMBIAR ESTE PIN
 //Set pin de Pir
 #define PIRPin 4 // Pin de entrada
 // PINES para motores
@@ -18,12 +13,18 @@
 int velocidad = 255;          // velocidad de los motores (0-255)
 
 //seteo de pines sensor proximidad
-#define TRIGGER_PIN  6      // CAMBIAR ESTE PIN
-#define ECHO_PIN     5      // CAMBIAR ESTE PIN
+#define TRIGGER_PIN  12      // pin cambiado de 6 a 12
+#define ECHO_PIN     11      // pin cambiado de 5 a 11
 #define MAX_DISTANCE 200 //distancia maxima a identificar
 
 //Iniciacion de Variables
-int estado;
+char estado;  //recibe la informacion por serial, para ser filtrada en los movimientos 
+              /*   a = arriba
+               *   b = abajo
+               *   c = derecha
+               *   d = izquierda
+               *   f = se detiene
+               */
 int temp;
 int humedad;
 int dist;
@@ -76,10 +77,6 @@ void setup()
    Serial.begin(57600);
    //Serial.println("iniciando");
     pinMode(PIRPin, INPUT); // Configuramos el pin como entrada
-    pinMode(LEDPin1 , OUTPUT);
-    pinMode(LEDPin2 , OUTPUT);
-    pinMode(LEDPin3 , OUTPUT);
-    pinMode(LEDPin4 , OUTPUT);
 
     //pinMode para control motores
     pinMode(izqA, OUTPUT);
@@ -125,52 +122,40 @@ void loop()
   */
   Serial.println(2);
   if(Serial.available()>0){
-     estado = 0;
      estado = Serial.read();
   
-    if(estado =='1'){ //Ariba
-         digitalWrite(LEDPin1 , HIGH);
-         delay(1000);
-         digitalWrite(LEDPin1 , LOW);
-         //new
-         analogWrite(derB, 0);     
-         analogWrite(izqB, 0); 
-         analogWrite(derA, velocidad);  
-         analogWrite(izqA, velocidad);  
+    if(estado =='a'){ //Ariba
+         digitalWrite(derB, 0);     
+         digitalWrite(izqB, 0); 
+         digitalWrite(derA, velocidad);  
+         digitalWrite(izqA, velocidad);  
         
       }
-    if(estado =='2'){ //Abajo  
-        digitalWrite(LEDPin2 , HIGH);
-        delay(1000);
-        digitalWrite(LEDPin2 , LOW);
-        //new
-        analogWrite(derA, 0);    
-        analogWrite(izqA, 0);
-        analogWrite(derB, velocidad);  
-        analogWrite(izqB, velocidad);  
+    if(estado =='b'){ //Abajo  
+        digitalWrite(derA, 0);    
+        digitalWrite(izqA, 0);
+        digitalWrite(derB, velocidad);  
+        digitalWrite(izqB, velocidad);  
       
     }
-    if(estado =='3'){//Derecha
-        digitalWrite(LEDPin3 , HIGH);
-        delay(1000);
-        digitalWrite(LEDPin3 , LOW);
-        //new
-
-        analogWrite(derB, 0);     
-        analogWrite(izqB, 0);
-        analogWrite(izqA, 0);
-        analogWrite(derA, velocidad);  
+    if(estado =='c'){//Derecha
+        digitalWrite(derB, 0);     
+        digitalWrite(izqB, 0);
+        digitalWrite(izqA, 0);
+        digitalWrite(derA, velocidad);  
     }
-    if(estado =='4'){//Izquierda
-        digitalWrite(LEDPin4 , HIGH);
-        delay(1000);
-        digitalWrite(LEDPin4 , LOW);
-        //new
-        analogWrite(derB, 0);     
-        analogWrite(izqB, 0); 
-        analogWrite(derA, 0);  
-        analogWrite(izqA, velocidad);    
-    } 
+    if(estado =='d'){//Izquierda
+        digitalWrite(derB, 0);     
+        digitalWrite(izqB, 0); 
+        digitalWrite(derA, 0);  
+        digitalWrite(izqA, velocidad);    
+    }
+    if(estado =='f'){//se detiene
+        digitalWrite(derB, 0);     
+        digitalWrite(izqB, 0); 
+        digitalWrite(derA, 0);  
+        digitalWrite(izqA, 0);    
+    }  
   } 
   
 }

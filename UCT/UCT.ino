@@ -128,27 +128,37 @@ void loop()
          digitalWrite(derB, 0);     
          digitalWrite(izqB, 0); 
          digitalWrite(derA, velocidad);  
-         digitalWrite(izqA, velocidad);  
+         digitalWrite(izqA, velocidad);
+         delay(500);
+         digitalWrite(derA, 0); 
+         digitalWrite(izqA, 0);  
         
       }
     if(estado =='b'){ //Abajo  
         digitalWrite(derA, 0);    
         digitalWrite(izqA, 0);
         digitalWrite(derB, velocidad);  
-        digitalWrite(izqB, velocidad);  
+        digitalWrite(izqB, velocidad);
+        delay(500);
+        digitalWrite(derB, 0); 
+        digitalWrite(izqB, 0);    
       
     }
     if(estado =='c'){//Derecha
         digitalWrite(derB, 0);     
         digitalWrite(izqB, 0);
         digitalWrite(izqA, 0);
-        digitalWrite(derA, velocidad);  
+        digitalWrite(derA, velocidad);
+        delay(500);
+        digitalWrite(derA, 0);  
     }
     if(estado =='d'){//Izquierda
         digitalWrite(derB, 0);     
         digitalWrite(izqB, 0); 
         digitalWrite(derA, 0);  
-        digitalWrite(izqA, velocidad);    
+        digitalWrite(izqA, velocidad);
+        delay(500);
+        digitalWrite(izqA, 0);    
     }
     if(estado =='f'){//se detiene
         digitalWrite(derB, 0);     

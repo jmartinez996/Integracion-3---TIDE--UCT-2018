@@ -29,8 +29,11 @@ int temp;
 int humedad;
 int dist;
 int piir;
-String aData[4];
 
+//Se utiliza en modulo ver datos de App
+String aData[4];
+String dv = ",";
+String data = "";
 
 //Constructor sensor proximidad y temmperatura y humedad
 SHT1x sht1x(dataPin, clockPin);
@@ -102,10 +105,6 @@ void loop()
   spir sp;
   piir=(sp.GetValue());//imprimimos el 1 si detecta movimiento y 0 si no
   aData[3] = String(piir);
-
-  String dv = ",";
-  String data = aData[0]+dv+aData[1]+dv+aData[2]+dv+aData[3];
-  Serial.println(data);
   
   /*
   Serial.print("Temperatura: ");
@@ -165,6 +164,15 @@ void loop()
         digitalWrite(izqB, 0); 
         digitalWrite(derA, 0);  
         digitalWrite(izqA, 0);    
+    }  
+
+    if(estado=='v'){ //activar seccion ver datos
+        data = aData[0]+dv+aData[1]+dv+aData[2]+dv+aData[3];
+        Serial.println(data);   
+    }  
+
+    if(estado=='w'){ //desactivar seccion ver datos
+        estado = 'z';   
     }  
   } 
   

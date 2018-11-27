@@ -2,6 +2,7 @@ int Mizq1 = 10; // pin digital 10
 int Mder1 = 9; // pin digital 10
 int Mizq2 = 6; // pin digital 10
 int Mder2 = 5; // pin digital 10
+int bloque[20];
 class mov{  
   public:
     void up(){
@@ -48,28 +49,31 @@ void setup() {
   pinMode(Mder2, OUTPUT);
 }
 mov r1;
+int i;
+int d;
 void loop() {
 
   if(Serial.available()>0){
-     direccion = 0;
-     direccion = Serial.read();
-  
-    if(direccion =='       ↑'){ //Arriba
+    for(d=0;d<20;d++){
+      bloque[d]=Serial.read();
+      }
+  }
+    for(i=0;i<=20;i++){
+     if(bloque[i] =='1'){ //Arriba
          r1.up();
          delay(500);
       }
-    if(direccion =='       ↓'){ //Abajo  
+     if(bloque[i] =='2'){ //Abajo  
        r1.down();
        delay(500);
     }
-    if(direccion =='       →'){//Derecha
+      if(bloque[i] =='3'){//Derecha
         r1.Mder();
         delay(500);
     }
-    if(direccion =='       ←'){//Izquierda
+      if(bloque[i] =='4'){//Izquierda
         r1.Mizq();
         delay(500);      
-    } 
-  } 
-  
+      } 
+    }
 }

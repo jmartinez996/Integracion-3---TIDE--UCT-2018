@@ -19,13 +19,6 @@ int velocidad = 255;          // velocidad de los motores (0-255)
 
 //Iniciacion de Variables
 char modulo;  //recibe la informacion por serial, para ser filtrada en los movimientos 
-char estado;
-              /*   a = arriba
-               *   b = abajo
-               *   c = derecha
-               *   d = izquierda
-               *   f = se detiene
-               */
 int temp;
 int humedad;
 int dist;
@@ -122,10 +115,22 @@ void Movimiento1(char mov){
     digitalWrite(derA, 0);  
     digitalWrite(izqA, 0);    
   }  
+
+  //Falta definir movimientos en 45 grados
 }
 
-void Movimiento2(char mov){
-  mov = "c";
+//funcion que controla movimiento por bloques
+void Movimiento2(String bloque){
+  //Genera split a cadena de intrucciones
+  for(int i=0; i<sizeof(bloque)-1; i++){
+    /**Serial.print(i, DEC);
+    Serial.print(" = ");
+    Serial.write(bloque[i]);
+    Serial.println();**/
+    if(bloque[i]!=','){
+      Movimiento1(bloque[i]);
+    }
+  }
 }
 
 
@@ -160,33 +165,22 @@ void loop()
   piir=(sp.GetValue());//imprimimos el 1 si detecta movimiento y 0 si no
   aData[3] = String(piir);
   
-  //Serial.println(2);
-  
   while(Serial.available()>0){
     modulo = Serial.read();
 
     do{
-      estado = Serial.read();
+      char estado = Serial.read();
       Movimiento1(estado);
-    }while(modulo=="p" && modulo!="q");
+    }while(modulo=='p' && modulo!='q');
     
     do{
-      estado = Serial.read();
+      String estado = String(Serial.read());
       Movimiento2(estado);
-    }while(modulo=="r" && modulo!="s");
+    }while(modulo=='r' && modulo!='s');
     
     do{
       data = aData[0]+dv+aData[1]+dv+aData[2]+dv+aData[3];
       Serial.println(data);
-    }while(modulo=="v" && modulo!="w");
-    
-    //Movimiento(estado);
+    }while(modulo=='v' && modulo!='w');
   }
-/**
-  if(Serial.available()>0){
-    estado = Serial.read();
-  
-    Movimiento(estado);
-  } **/
-  
 }

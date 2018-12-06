@@ -119,7 +119,7 @@ void loop()
   Serial.print("Movimiento: ");
   Serial.println(piir);
   */
-  Serial.println(2);
+  //Serial.println(2);
   if(Serial.available()>0){
      estado = Serial.read();
   
